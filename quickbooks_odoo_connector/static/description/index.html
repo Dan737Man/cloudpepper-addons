@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer="defer" type="text/javascript" src="/web/assets/12083783-6005cfa/1/web.assets_common_minimal.min.js" data-asset-bundle="web.assets_common_minimal" data-asset-version="6005cfa"></script>
+  <script defer="defer" type="text/javascript" src="/web/assets/12083790-435fc74/1/web.assets_frontend_minimal.min.js" data-asset-bundle="web.assets_frontend_minimal" data-asset-version="435fc74"></script>
+  <script defer="defer" type="text/javascript" data-src="/web/assets/12312463-1dfafd8/1/web.assets_common_lazy.min.js" data-asset-bundle="web.assets_common_lazy" data-asset-version="1dfafd8"></script>
+  <script defer="defer" type="text/javascript" data-src="/web/assets/12312464-582a432/1/web.assets_frontend_lazy.min.js" data-asset-bundle="web.assets_frontend_lazy" data-asset-version="582a432"></script>
+<link rel="canonical" href="https://apps.odoo.com/apps/modules/14.0/indian_gst_calculation/"/>
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="generator" content="Odoo"/>
+<meta name="google-site-verification" content="pgjyH0qvN69B0m_HrTKV6h8TVnbRXp5etEHo19unPy4"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="indian_gst_calculation | Odoo Apps Store"/>
+        <meta property="og:site_name" content="Odoo S.A."/>
+        <meta property="og:url" content="https://apps.odoo.com/apps/modules/14.0/indian_gst_calculation/"/>
+        <meta property="og:image" content="https://apps.odoo.com/web/image/loempia.module/93265/icon_image?unique=2d6a0f3"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="indian_gst_calculation | Odoo Apps Store"/>
+    <meta name="twitter:image" content="https://apps.odoo.com/web/image/loempia.module/93265/icon_image/300x300?unique=2d6a0f3"/>
+<link rel="canonical" href="https://apps.odoo.com/apps/modules/14.0/indian_gst_calculation/"/>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+<title> GST Invoice (India) | Odoo Apps Store </title>
+<link type="image/x-icon" rel="shortcut icon" href="//apps.odoocdn.com/web/image/website/1/favicon?unique=dfe951a"/>
+<link rel="preload" href="//apps.odoocdn.com/web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin=""/>
+<link type="text/css" rel="stylesheet" href="/web/assets/12312450-e61f5aa/1/web.assets_common.min.css" data-asset-bundle="web.assets_common" data-asset-version="e61f5aa"/>
+<script src="./carousel-slider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link type="text/css" rel="stylesheet" href="/web/assets/12312458-ab69b11/1/web.assets_frontend.min.css" data-asset-bundle="web.assets_frontend" data-asset-version="ab69b11"/>
+<script id="web.layout.odooscript" type="text/javascript">
+    var odoo = {
+        csrf_token: "380ce7588a1b1e2ee15ca7cd7918c087ae993dcao1700294991",
+        debug: "",
+    };
+</script>
+<script type="text/javascript">
+odoo.__session_info__ = {"is_admin": false, "is_system": false, "is_website_user": true, "user_id": false, "is_frontend": true, "profile_session": null, "profile_collectors": null, "profile_params": null, "show_effect": "True", "translationURL": "/website/translations", "cache_hashes": {"translations": "9abe6ca5009dcf42c2231f19055828a776612cc3"}, "geoip_country_code": "IN"};
+if (!/(^|;\s)tz=/.test(document.cookie)) {
+    const userTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    document.cookie = `tz=${userTZ}; path=/`;
+}
+</script>
+<script src="https://www.recaptcha.net/recaptcha/api.js?render=6Lcul_cUAAAAAIm051Is0wb8-Tq-AiOaK_ePfzvo"></script>
+<script>
+    if (window.grecaptcha) {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Lcul_cUAAAAAIm051Is0wb8-Tq-AiOaK_ePfzvo', {action: 'apps_download'});
+        });
+    }
+</script>
+<script defer="defer" type="text/javascript" src="/web/assets/12083783-6005cfa/1/web.assets_common_minimal.min.js" data-asset-bundle="web.assets_common_minimal" data-asset-version="6005cfa"></script>
+<script defer="defer" type="text/javascript" src="/web/assets/12083790-435fc74/1/web.assets_frontend_minimal.min.js" data-asset-bundle="web.assets_frontend_minimal" data-asset-version="435fc74"></script>
+<script defer="defer" type="text/javascript" data-src="https://apps.odoo.com/web/assets/12312463-1dfafd8/1/web.assets_common_lazy.min.js" data-asset-bundle="web.assets_common_lazy" data-asset-version="1dfafd8"></script>
+<script defer="defer" type="text/javascript" data-src="https://apps.odoo.com/web/assets/12312464-582a432/1/web.assets_frontend_lazy.min.js" data-asset-bundle="web.assets_frontend_lazy" data-asset-version="582a432"></script>
+<link rel="canonical" href="https://apps.odoo.com/apps/modules/14.0/indian_gst_calculation/"/>
+
+<!-- <style>
+  /* Initially hide both sections */
+  .tab-content {
+    display: none;
+    text-align: center;
+  }
+  
+  /* Show the default section */
+  :target {
+    display: block;
+  }
+  
+  /* Show the Features section as the default */
+  /* #features:target, #screenshots:target {
+    display: block;
+  } */
+  </style> -->
+
+  <style>
+    .accordion-content {
+      display: none;
+      overflow: hidden;
+    }
+ 
+    .accordion-header {
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+ 
+    .accordion-toggle {
+      background-color: rgb(199, 222, 245);
+      color: #0f1e40;
+      text-decoration: none;
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+    }
+</style>
+
+</head>
+<section back>
+  <div class="container pt-5 pb-5 text-center" style="font-family:'Poppins', sans-serif; padding: 10px;padding-top: 1rem !important;">
+    <div class=" text-center" style="font-family:'Poppins', sans-serif; text-align:center; color: #0f1e40; font-family:'Poppins', sans-serif; font-weight: 600; text-align: center;
+    text-transform: uppercase; opacity: 1; font-size: 20px;">
+    <!-- <div class="CONNECTOR_img">
+      <img src="qb_strip.png" alt="shopify2" style="width: 100%; padding-bottom: 20px;">
+    </div> -->
+    <!-- <h2>ODOO QUICKBOOKS ONLINE CONNECTOR </h2> -->
+    <h2 style="font-family: 'Poppins', sans-serif; text-align: center; font-weight: 500;">
+      ODOO QUICKBOOKS ONLINE CONNECTOR
+    </h2>
+  
+    <div class="cust-1" style=" padding-top: 8px;">
+      <p class="h6" style="color: #0f1e40; font-family:'Poppins', sans-serif; font-weight: 400; text-align: center; text-transform: uppercase; opacity: 1;
+      font-size: 20px;">By Techspawn Solutions Pvt Ltd</p>
+      <!-- <p class="h6 text-white">Manage your Quickbooks in real time with bi-directional data exchange between Quickbooks
+        and Odoo.
+      </p> -->
+    </div>
+  </div>
+    <div class="cust_2" style="line-height: 42px; padding-top: 2%; font-size: 18px;">
+      <p style="font-size: 15px; line-height: 24px; max-width: 915px; margin:auto;">
+        Streamlines financial managements, invoicing payment, bills payments, journals and sales between Odoo and Quickbooks. 
+
+        The advanced logger helps you track export status in real-time and easily import data for any date range, keeping your records organized. Our app is easy to set up, so you can start quickly and without efforts. 
+          
+    </div>
+    <div style="font-size: 17px;color: red;">Note: This module supports USA Accounting.</div>
+
+  </div>
+  </div>
+</section>
+  
+<section class="oe_container pb-5">
+  <div class="mt2 mb2">
+    <!-- <h2 class="cust_head shadow-lg mb-5" style="background-color: #f0f4f7; padding: 1%; border-radius: 15px; color: #091E42; font-family: Montserrat;
+    text-align: center; text-transform: uppercase;">HIGHLIGHTS
+    </h2> -->
+    <h2 style="font-family:'Poppins', sans-serif; text-align: center; font-weight: 500;">
+      HIGHLIGHTS
+    </h2>
+    <div style="display:flex; margin-left:300px; padding:20px; border-radius:15px; max-width:1200px; justify-content: space; gap: 20px; ">
+    
+      <!-- First Highlight Block -->
+      <div style="max-width:30%; background-color:#f0f8ff; padding:40px; border-radius:15px; text-align:left; color:#003366; font-family:'Poppins', sans-serif; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);margin-right:20px;">
+        <div style="text-align:center; margin-bottom:20px;">
+          <img src="https://img.icons8.com/color/48/000000/data-in-both-directions.png" alt="Data Import Icon" style="width: 50px;"/>
+        </div>
+        <ul style="list-style-type: none; padding-left: 0; font-weight: bold;">
+          <li style="margin-bottom: 10px; display: flex; align-items: center;">
+            <i class="fas fa-calendar-alt" style="color: #003366; margin-right: 10px;"></i> Import of Data for selected Date Slots
+          </li>
+          <li style="display: flex; align-items: center;">
+            <i class="fas fa-sync" style="color: #003366; margin-right: 10px;"></i> Get Status of Synced Data
+          </li>
+        </ul>
+      </div>
+    
+      <!-- Second Highlight Block -->
+      <div style="max-width:30%; background-color:#f0f8ff; padding:50px; border-radius:15px; text-align:left; color:#003366; font-family:'Poppins', sans-serif; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);">
+        <div style="text-align:center; margin-bottom:20px;">
+          <img src="https://img.icons8.com/color/48/000000/synchronize.png" alt="Sync Icon" style="width: 50px;"/>
+        </div>
+        <ul style="list-style-type: none; padding-left: 0; font-weight: bold;">
+          <li style="margin-bottom: 10px; display: flex; align-items: center;">
+            <i class="fas fa-clipboard-list" style="color: #003366; margin-right: 10px;"></i> Logger Functionality
+          </li>
+          <li style="display: flex; align-items: center; margin-left:-2px">
+            <i class="fas fa-bolt" style="color: #003366;"></i>Single-Click Synchronization
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+</section>
+
+
+
+<section class="oe_container pb-5">
+  <div class="mt2 mb2">
+    <!-- <h2 class="cust_head shadow-lg mb-5" style="background-color: #f0f4f7; padding: 1%; border-radius: 15px; color: #091E42; font-family: Montserrat;
+    text-align: center; text-transform: uppercase;">HIGHLIGHTS
+    </h2> -->
+  
+    <h2 style="font-family:'Poppins', sans-serif; text-align: center; font-weight: 500;">
+      FLOWCHART
+    </h2>
+    <div class="row justify-content-center">
+      <img class="img img-responsive" src="QB_FLOW.jpg" style="width: 900px;">
+    </div>
+  
+  </div>
+</section>
+
+<!-- <section class="oe_container mt32 mb32 mb-3" style="margin-left:calc(-42vw + 50%); width:84vw">
+
+  <div class="container-fluid">
+    <div id="loempia_tabs" class="d-flex justify-content-center mb-3">
+      <div class="mr-2">
+        <a href="#features" class="btn btn-primary" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">✔️Features</a>
+      </div>
+      <div>
+        <a href="#screenshots" class="btn btn-primary" style="background-color: rgb(199, 222, 245); color: #0f1e40;box-shadow: 1px 2px 5px #000000;">🖼️Screenshots</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" style="border:1px solid #eee; border-radius:10px;background-color: rgb(237, 243, 249);text-align: center;">
+    
+    <section id="features" class="tab-content" style="margin-top:10px;text-align: center;">
+      <h3 style="font-size: 1.800em;">Import and Export below things from QB and Odoo</h3>
+      
+      <div class="row m-4 row justify-content-center" style="justify-content: center;align-items: center;">
+        <div class="col-md-8 col-sm-8">
+          <div class="container row" style="padding: 10px 10; align-items: center; justify-content: center;">
+            <div class="col-md-2" style="padding-right: 5px;">
+              <img class="img img-responsive" src="Icons_Inventory.png" style="width: 80px;">
+            </div>
+            <div class="col-md-6" style="padding-left: -50px;">
+              <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Inventory</h3>
+              <p style="font-family:Roboto; font-size:16px;">Product, Product Category</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-8 col-sm-8">
+          <div class="container row" style="padding: 10px 0; align-items: center; justify-content: center;">
+            <div class="col-md-2" style="padding-right: 5px;">
+              <img class="img img-responsive" src="Icons_Sales.png" style="width: 80px;">
+            </div>
+            <div class="col-md-6" style="padding-left: 5px;">
+              <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Sales</h3>
+              <p style="font-family:Roboto; font-size:16px;">Customer, Sale Order, Estimates</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-8 col-sm-8">
+          <div class="container row" style="padding: 10px 0; align-items: center; justify-content: center;">
+            <div class="col-md-2" style="padding-right: 5px;">
+              <img class="img img-responsive" src="Icons_Purchase.png" style="width: 80px;">
+            </div>
+            <div class="col-md-6" style="padding-left: 5px;">
+              <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Purchase</h3>
+              <p style="font-family:Roboto; font-size:16px;">Vendor, Purchase Order</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-8 col-sm-8">
+          <div class="container row" style="padding: 10px 0; align-items: center; justify-content: center;">
+            <div class="col-md-2" style="padding-right: 5px;">
+              <img class="img img-responsive" src="Icons_Employees.png" style="width: 80px;">
+            </div>
+            <div class="col-md-6" style="padding-left: 5px;">
+              <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Employee</h3>
+              <p style="font-family:Roboto; font-size:16px;">Employee, Employee Category</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-8 col-sm-8">
+          <div class="container row" style="padding: 10px 0; align-items: center; justify-content: center;">
+            <div class="col-md-2" style="padding-right: 5px;">
+              <img class="img img-responsive" src="Icons_Accounting.png" style="width: 80px;">
+            </div>
+            <div class="col-md-6" style="padding-left: 5px;">
+              <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Accounting</h3>
+              <p style="font-family:Roboto; font-size:16px;">Account, Payment Terms, Payment Methods, Invoice, Invoice Payments, Bill, Bill Payments, Journals</p>
+              <p style="font-family:Roboto; font-size:16px;">Tax - Import Functionality</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="tab-content" style="margin-top:20px">
+      <div id="Screenshots1" class="tab-panel" role="tabpanel">
+        <div class="row justify-content-center">
+          <img class="img img-responsive" src="QBConnection.png" style="width: 1000px; margin-bottom: 50px; height: 500px;">
+          <img class="img img-responsive" src="Sale Order.png" style="width: 1000px; margin-bottom: 50px; height: 500px;">
+          <img class="img img-responsive" src="Invoice.png" style="width: 1000px; margin-bottom: 50px; height: 500px;">
+        </div>
+      </div>
+    </section>
+  </div>
+</section> -->
+
+
+
+
+<section class="oe_container mt32 mb32" style="margin-left:calc(-42vw + 50%); width:84vw">
+  <div class="container-fluid">
+    <div id="loempia_tabs" class="d-flex justify-content-center mb-3">
+    <!-- Nav Tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="features-tab" data-bs-toggle="tab" href="#features" role="tab" aria-controls="features" aria-selected="true" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">✔️Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="screenshots-tab" data-bs-toggle="tab" href="#screenshots" role="tab" aria-controls="screenshots" aria-selected="false" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">🖼️Screenshots</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="documentation-tab" data-bs-toggle="tab" href="#documentation" role="tab" aria-controls="documentation" aria-selected="false" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">📄Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="help-and-support-tab" data-bs-toggle="tab" href="#help_and_support" role="tab" aria-controls="help_and_support" aria-selected="false" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">🎧Help and Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="faqs-tab" data-bs-toggle="tab" href="#faqs" role="tab" aria-controls="faqs" aria-selected="false" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">❓FAQs</a>
+        </li>
+      </ul>
+    </div>
+   
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Features Section -->
+        <div class="tab-pane fade show active" id="features" role="tabpanel" aria-labelledby="features-tab">
+          <h3 style="font-size:1.800em; text-align:center">Import and Export below things from QB and Odoo</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="box border p-3 shadow-lg" style="text-align: center; min-height: 220px; border-radius: 8px; transition: transform 0.2s;">
+                <img class="img img-responsive" src="Icons_Inventory.png" style="width: 80px; margin-bottom: 10px;">
+                <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Inventory</h3>
+                <p style="font-family:Roboto; font-size:16px; color: #0b0b0b;">Product, Product Category</p>
+              </div>
+            </div>
+        
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="box border p-3 shadow-lg" style="text-align: center; min-height: 220px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; transition: transform 0.2s;">
+                <img class="img img-responsive" src="Icons_Sales.png" style="width: 80px; margin-bottom: 10px;">
+                <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Sales</h3>
+                <p style="font-family:Roboto; font-size:16px; color: #0b0b0b;">Customer, Sale Order, Estimates</p>
+              </div>
+            </div>
+        
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="box border p-3 shadow-lg" style="text-align: center; min-height: 220px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; transition: transform 0.2s;">
+                <img class="img img-responsive" src="Icons_Purchase.png" style="width: 80px; margin-bottom: 10px;">
+                <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Purchases</h3>
+                <p style="font-family:Roboto; font-size:16px;color: #0b0b0b;">Vendor, Purchase Order</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="box border p-3 shadow-lg" style="text-align: center; min-height: 220px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; transition: transform 0.2s;">
+                <img class="img img-responsive" src="Icons_Employees.png" style="width: 80px; margin-bottom: 10px;">
+                <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Employee</h3>
+                <p style="font-family:Roboto; font-size:16px;color: #0b0b0b;">Employee, Employee Category</p>
+              </div>
+            </div>
+        
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="box border p-3 shadow-lg" style="text-align: center; min-height: 220px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; transition: transform 0.2s;">
+                <img class="img img-responsive" src="Icons_Accounting.png" style="width: 80px; margin-bottom: 10px;">
+                <h3 style="font-family:Roboto; font-weight:500; font-size:22px;">Accounting</h3>
+                <p style="font-family:Roboto; font-size:16px;color: #0b0b0b;">Account, Payment Terms, Payment Methods, Invoice, Invoice Payments, Bill, Bill Payments, Journals</p>
+                <p style="font-family:Roboto; font-size:16px;color: #0b0b0b;">Tax - Import Functionality</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+   
+        <!-- Screenshots Section -->
+    <div class="tab-pane fade" id="screenshots" role="tabpanel" aria-labelledby="screenshots-tab">
+      <div class="row justify-content-center">
+        <img class="img img-responsive" src="QBConnection.png" style="width: 1000px; margin-bottom: 30px; height: 500px;">
+        <img class="img img-responsive" src="Sale Order.png" style="width: 1000px; margin-bottom: 30px; height: 500px;">
+        <img class="img img-responsive" src="Invoice.png" style="width: 1000px; margin-bottom: 30px; height: 500px;">
+      </div>
+    </div>
+   
+        <!-- Documentation Section -->
+    <div class="tab-pane fade" id="documentation" role="tabpanel" aria-labelledby="documentation-tab">
+      <div class="container p-2 text-center">
+      <p class="h5 pt-3" style="line-height:35px; font-size:20px;">For Quickbooks Documentation, please refer to the below link</p>
+      <a href="https://techspawn.com/docs/quickbooks-odoo-connector-v17" style="color:blue">https://techspawn.com/docs/quickbooks-odoo-connector-v17</a>
+      <p class="h5 pt-3" style="font-size: 17px;font-family:'Poppins', sans-serif; margin-bottom:50px;">
+        <strong style="color: red;">NOTE</strong> - According to our licensing agreement, each installation of the application requires a separate purchase for each unique company/database instance. If you want to utilize the application for multiple companies, we kindly ask you to consider purchasing separate licenses for each respective company.
+      </p>
+      </div>
+    </div>
+   
+        <!-- Help and Support Section -->
+    <div class="tab-pane fade" id="help_and_support" role="tabpanel" aria-labelledby="help-and-support-tab">
+      <p style="font-size: 15px; line-height: 24px; max-width: 915px; margin:auto;">
+        <center>Get Immediate support for any of your query</center>
+        <center>You will get 90 days free support for any doubt queries, and bug fixing (excluding data recovery) or any type of issue related to this module.</center>
+  
+        <div class="container">
+        <div class="row m-1" >
+          <center><div class="col-md-6 col-sm-10"></div></center>
+            <div class="container row" style="box-shadow: -40px 40px 160px 0 #eec9c914, -8px 8px 15px 0 rgb(120 120 120 / 4%), 3px 3px 30px 0 rgb(0 0 0 / 4%) !important;
+           border-radius:10px; padding:10px 0px; align-items: center; justify-content: center; margin: 10px; width: 980;">
+              <div class="col-md-2" style="float:left">
+                <img class="img img-responsive" src="https://icons.veryicon.com/png/o/internet--web/sesame-treasure/bind-mailbox.png" style="width: 66px;">
+              </div>
+              <div class="col-md-7" style="padding-left:0; float:left; width:70% ; flex: auto;">
+                <h3 class="mt8" style="font-family:'Montserrat'; font-weight:500; font-size:22px"><strong>Write a mail to us:</strong> </h3>
+                <a href="mailto:support@techspawn.com" style="color:#48c6be ; display: flex;">support@techspawn.com</a>
+                <p class=" mt8" style="font-family:Montserrat ; display: inline;margin-left:-160px"> Any queries or want any extra features? Just drop a mail to our support </p>
+              </div>
+              <div class="col-md-3">
+                <a class="btn" href="mailto:support@techspawn.com">
+                  <button type="button" class="btn" style="background-color:#017e84; margin: 0; height: 30; display: flex; justify-content: center; align-items: center; font-family: Montserrat; font-weight: bold; color: white; border: #017e84; padding: 20; border-radius: 5px;">
+                    Write to Us
+                </button>
+                </a>
+                
+            </div>
+            </div>
+          </div>
+          </div>
+      
+  
+        <div class="container">
+          <div class="row m-1">
+            <center><div class="col-md-6 col-sm-10 text-center"></div></center>
+              <div class="container row" style="box-shadow: -40px 40px 160px 0 rgb(0 0 0 / 8%), -8px 8px 15px 0 rgb(120 120 120 / 4%), 3px 3px 30px 0 rgb(0 0 0 / 4%) !important;
+              border-radius:10px; padding:10px 0px; align-items: center; justify-content: center; margin: 10px; width: 980;">
+                <div class="col-md-2" style="float:left ;">
+                  <img class="img img-responsive" src="data:image/png;base64,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" style="width: 66px; border-radius: 20px;">
+                </div>
+                <div class="col-md-7" style="padding-left:0; float:left; width:70% ; flex: auto;">
+                  <h3 class="mt8" style="font-family:'Montserrat'; font-weight:500; font-size:22px"><strong>Get in touch with our Expert:</strong> </h3>
+            
+                  <span onclick="window.location.href='https://techspawn.com/connect-with-techspawn'" style="color: #48c6be; cursor: pointer; display: flex;">
+                    https://techspawn.com/connect-with-techspawn</span>
+                
+                  <p class=" mt8" style="font-family:Montserrat ; display: inline;margin-left:-3px"> Any technical queries, want extra features, or anything else, our team is ready to answer all your questions just raise a support ticket</p>
+                </div>
+                <div class="col-md-3"  >
+                </div>
+              </div>
+          </div>
+        </div>
+      </p>
+    </div>
+   
+        <!-- FAQs Section -->
+    <div class="tab-pane fade" id="faqs" role="tabpanel" aria-labelledby="faqs-tab">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Can the app sync data both ways?</strong></p>
+            <p>Ans - Yes, you can sync data both ways between QuickBooks Online and Odoo.</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Can we make changes to the module?</strong></p>
+            <p class="px-3">Ans - Yes, we can customize the module to fit your needs. If you need any changes, please contact us at support@techspawn.com. Our team is ready to help.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong> How can we set up this module in Odoo?</strong></p>
+            <p class="px-3">Ans - We include detailed documentation to help you set up the QuickBooks Odoo Connector. For any issues, contact us at support@techspawn.com.</p>
+          </div> 
+          <div class="col-md-6">
+            <p><strong>Does your module work with both Odoo Community and Enterprise editions?</strong></p>
+            <p class="px-3">Ans - Our module works with both Odoo Community and Enterprise editions, and configuration is the same for both.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Will we get help with installing the app when we buy it?</strong></p>
+            <p class="px-3">Ans - Yes, we offer full help with installing the app and any issues after it's installed.
+            </p>
+          </div> 
+          <div class="col-md-6">
+              <p><strong>Will I get updates if I buy the app?</strong></p>
+              <p class="px-3">Ans - Yes, you get the latest version of the app you bought.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Does this module work with Odoo.sh.?</strong></p>
+            <p class="px-3">Ans - Yes, our module works with odoo.sh.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+   
+   
+
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      alert('Hello');
+      const toggles = document.querySelectorAll(".accordion-toggle");
+      console.log(toggles);
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const contentId = this.getAttribute("href").substring(1);
+          const content = document.getElementById(contentId);
+ 
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            document.querySelectorAll('.accordion-content').forEach((el) => el.style.display = 'none');
+            content.style.display = "block";
+          }
+        });
+      });
+    });
+</script> -->
+
+
+<!-- <section class="oe_container mt32 mb32" style="margin-left:calc(-42vw + 50%); width:84vw">
+  <div class="container-fluid">
+    <div id="loempia_tabs" class="d-flex justify-content-center mb-3">
+      <div class="mr-2">
+        <a href="#documentation" class="btn btn-primary" style="background-color: rgb(199, 222, 245); color: #0f1e40;box-shadow: 1px 2px 5px #000000;margin-right:10px;">📄Documentation</a>
+      </div>
+      <div>
+        <a href="#help_and_support" class="btn btn-primary mr-2" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;margin-right:10px;">🎧Help and Support</a>
+      </div>
+      <div>
+        <a href="#faqs" class="btn btn-primary" style="background-color: rgb(199, 222, 245); color: #0f1e40; box-shadow: 1px 2px 5px #000000;">❓FAQs</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="documentation" class="tab-content">
+    <div class="container p-2 text-center" style="font-family:'Poppins', sans-serif;">
+      <p class="h5 pt-3" style="line-height: 35px; font-size: 20px;font-family:'Poppins', sans-serif;">For Quickbooks Documentation Please refer the below link<br>
+        <span onclick="window.location.href='https://techspawn.com/docs/quickbooks-odoo-connector-v17'" style="color: blue; cursor: pointer;">
+          https://techspawn.com/docs/quickbooks-odoo-connector-v17
+        </span>
+      </p>
+    </div>
+    <div class="container p-2 text-center" style="font-family:'Poppins', sans-serif;">
+      <p class="h5 pt-3" style="font-size: 17px;font-family:'Poppins', sans-serif; margin-bottom:50px;">
+        <strong style="color: red;">NOTE</strong> - According to our licensing agreement, each installation of the application requires a separate purchase for each unique company/database instance. If you want to utilize the application for multiple companies, we kindly ask you to consider purchasing separate licenses for each respective company.
+      </p>
+    </div>
+  </section>
+
+  <section id="help_and_support" class="tab-content">
+    <p style="font-size: 15px; line-height: 24px; max-width: 915px; margin:auto;">
+      <center>Get Immediate support for any of your query</center>
+      <center>You will get 90 days free support for any doubt queries, and bug fixing (excluding data recovery) or any type of issue related to this module.</center>
+
+      <div class="container">
+      <div class="row m-1" >
+        <center><div class="col-md-6 col-sm-10"></div></center>
+          <div class="container row" style="box-shadow: -40px 40px 160px 0 #eec9c914, -8px 8px 15px 0 rgb(120 120 120 / 4%), 3px 3px 30px 0 rgb(0 0 0 / 4%) !important;
+         border-radius:10px; padding:10px 0px; align-items: center; justify-content: center; margin: 10px; width: 980;">
+            <div class="col-md-2" style="float:left">
+              <img class="img img-responsive" src="https://icons.veryicon.com/png/o/internet--web/sesame-treasure/bind-mailbox.png" style="width: 66px;">
+            </div>
+            <div class="col-md-7" style="padding-left:0; float:left; width:70% ; flex: auto;">
+              <h3 class="mt8" style="font-family:'Montserrat'; font-weight:500; font-size:22px"><strong>Write a mail to us:</strong> </h3>
+              <a href="mailto:support@techspawn.com" style="color:#48c6be ; display: flex;">support@techspawn.com</a>
+              <p class=" mt8" style="font-family:Montserrat ; display: inline;margin-left:-160px"> Any queries or want any extra features? Just drop a mail to our support </p>
+            </div>
+            <div class="col-md-3">
+              <a class="btn" href="mailto:support@techspawn.com">
+                <button type="button" class="btn" style="background-color:#017e84; margin: 0; height: 30; display: flex; justify-content: center; align-items: center; font-family: Montserrat; font-weight: bold; color: white; border: #017e84; padding: 20; border-radius: 5px;">
+                  Write to Us
+              </button>
+              </a>
+              
+          </div>
+          </div>
+        </div>
+        </div>
+    
+
+      <div class="container">
+        <div class="row m-1">
+          <center><div class="col-md-6 col-sm-10 text-center"></div></center>
+            <div class="container row" style="box-shadow: -40px 40px 160px 0 rgb(0 0 0 / 8%), -8px 8px 15px 0 rgb(120 120 120 / 4%), 3px 3px 30px 0 rgb(0 0 0 / 4%) !important;
+            border-radius:10px; padding:10px 0px; align-items: center; justify-content: center; margin: 10px; width: 980;">
+              <div class="col-md-2" style="float:left ;">
+                <img class="img img-responsive" src="data:image/png;base64,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" style="width: 66px; border-radius: 20px;">
+              </div>
+              <div class="col-md-7" style="padding-left:0; float:left; width:70% ; flex: auto;">
+                <h3 class="mt8" style="font-family:'Montserrat'; font-weight:500; font-size:22px"><strong>Get in touch with our Expert:</strong> </h3>
+          
+                <span onclick="window.location.href='https://techspawn.com/connect-with-techspawn'" style="color: #48c6be; cursor: pointer; display: flex;">
+                  https://techspawn.com/connect-with-techspawn</span>
+              
+                <p class=" mt8" style="font-family:Montserrat ; display: inline;margin-left:-3px"> Any technical queries, want extra features, or anything else, our team is ready to answer all your questions just raise a support ticket</p>
+              </div>
+              <div class="col-md-3"  >
+              </div>
+            </div>
+        </div>
+      </div>
+    </p>
+
+  </section>
+
+  <section id="faqs" class="tab-content" style="text-align: justify;">
+    <div class="container">
+      <div class="row" style="font-family:'Poppins', sans-serif;">
+          <div class="col-md-6">
+              <p><strong>Can the app sync data both ways? </strong></p>
+              <p class="px-3">Ans - Yes, you can sync data both ways between QuickBooks Online and Odoo.</p>
+          </div> 
+          <div class="col-md-6">
+              <p><strong>Can we make changes to the module?</strong></p>
+              <p class="px-3">Ans - Yes, we can customize the module to fit your needs. If you need any changes, please contact us at support@techspawn.com. Our team is ready to help.</p>
+          </div>
+      </div>
+      <div class="row" style="font-family:'Poppins', sans-serif;">
+          <div class="col-md-6">
+              <p><strong> How can we set up this module in Odoo?</strong></p>
+              <p class="px-3">Ans - We include detailed documentation to help you set up the QuickBooks Odoo Connector. For any issues, contact us at support@techspawn.com.</p>
+          </div> 
+          <div class="col-md-6">
+              <p><strong>Does your module work with both Odoo Community and Enterprise editions?</strong></p>
+              <p class="px-3">Ans - Our module works with both Odoo Community and Enterprise editions, and configuration is the same for both.</p>
+          </div>
+      </div>
+      <div class="row" style="font-family:'Poppins', sans-serif;">
+          <div class="col-md-6">
+              <p><strong>Will we get help with installing the app when we buy it?</strong></p>
+              <p class="px-3">Ans - Yes, we offer full help with installing the app and any issues after it's installed.
+              </p>
+          </div> 
+          <div class="col-md-6">
+              <p><strong>Will I get updates if I buy the app?</strong></p>
+              <p class="px-3">Ans - Yes, you get the latest version of the app you bought.</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <p><strong>Does this module work with Odoo.sh.?</strong></p>
+              <p class="px-3">Ans - Yes, our module works with odoo.sh.</p>
+          </div> 
+      </div>
+    </div>
+  </div>
+  </section>
+
+</section> -->
+
+<!-- <section class="oe_container mt32 mb32" style="margin-left:calc(-42vw + 50%); width:84vw">
+
+
+
+  <div class="container-fluid">
+    <div id="loempia_tabs" class="tab justify-content-center">
+      <div class="mr-2">
+        <a href="#Documentation" class="active btn btn-primary">📄Documentation</a>
+      </div>
+      <div class="mr-2">
+        <a href="#Help and Support" class="btn btn-primary">🎧Help and Support</a>
+      </div>
+      <div>
+        <a href="#FAQs" class="btn btn-primary">❓FAQs</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="border:1px solid #eee; border-radius:10px;background-color: rgb(237, 243, 249);">
+    <div id="Documentation" class="tabcontent">
+      <div class="container p-2 text-center" style="font-family:'Poppins', sans-serif;">
+        <p class="h5 pt-3" style="line-height: 35px; font-size: 20px;font-family:'Poppins', sans-serif;">For Quickbooks Documentation Please refer the below link<br>
+          <span onclick="window.location.href='https://techspawn.com/docs/quickbooks-odoo-connector-v17'" style="color: blue; cursor: pointer;">
+            https://techspawn.com/docs/quickbooks-odoo-connector-v17
+          </span>
+        </p>
+      </div>
+      <div class="container p-2 text-center" style="font-family:'Poppins', sans-serif;">
+        <p class="h5 pt-3" style="font-size: 17px;font-family:'Poppins', sans-serif; margin-bottom:50px;">
+          <strong style="color: red;">NOTE</strong> - According to our licensing agreement, each installation of the application requires a separate purchase for each unique company/database instance. If you want to utilize the application for multiple companies, we kindly ask you to consider purchasing separate licenses for each respective company.
+        </p>
+      </div>
+    </div>
+
+    <div id="Help and Support" class="tabcontent">
+      <p style="font-size: 15px; line-height: 24px; max-width: 915px; margin:auto;">
+        <center>Get Immediate support for any of your query</center>
+        <center>You will get 90 days free support for any doubt queries, and bug fixing (excluding data recovery) or any type of issue related to this module.</center>
+  
+        <div class="container">
+        <div class="row m-4" >
+          <center><div class="col-md-6 col-sm-10"></div></center>
+            <div class="container row" style="box-shadow: -40px 40px 160px 0 #eec9c914, -8px 8px 15px 0 rgb(120 120 120 / 4%), 3px 3px 30px 0 rgb(0 0 0 / 4%) !important;
+           border-radius:10px; padding:10px 0px; align-items: center; justify-content: center; margin: 10px; width: 980;">
+              <div class="col-md-2" style="float:left">
+                <img class="img img-responsive" src="https://icons.veryicon.com/png/o/internet--web/sesame-treasure/bind-mailbox.png" style="width: 66px;">
+              </div>
+              <div class="col-md-7" style="padding-left:0; float:left; width:70% ; flex: auto;">
+                <h3 class="mt8" style="font-family:'Montserrat'; font-weight:500; font-size:22px"><strong>Write a mail to us:</strong> </h3>
+                <a href="mailto:support@techspawn.com" style="color:#48c6be ; display: flex;">support@techspawn.com</a>
+                <p class=" mt8" style="font-family:Montserrat ; display: inline;"> Any queries or want any extra features? Just drop a mail to our support </p>
+              </div>
+              <div class="col-md-3">
+                <a class="btn" href="mailto:support@techspawn.com">
+                  <button type="button" class="btn" style="background-color:#017e84; margin: 0; height: 30; display: flex; justify-content: center; align-items: center; font-family: Montserrat; font-weight: bold; color: white; border: #017e84; padding: 20; border-radius: 5px;">
+                    Write to Us
+                </button>
+                </a>
+                
+            </div>
+            </div>
+          </div>
+          </div>
+      
+  
+        <div class="container">
+          <div class="row m-4">
+            <center><div class="col-md-6 col-sm-10 text-center"></div></center>
+              <div class="container row" style="box-shadow: -40px 40px 160px 0 rgb(0 0 0 / 8%), -8px 8px 15px 0 rgb(120 120 120 / 4%), 3px 3px 30px 0 rgb(0 0 0 / 4%) !important;
+              border-radius:10px; padding:10px 0px; align-items: center; justify-content: center; margin: 10px; width: 980;">
+                <div class="col-md-2" style="float:left ;">
+                  <img class="img img-responsive" src="data:image/png;base64,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" style="width: 66px; border-radius: 20px;">
+                </div>
+                <div class="col-md-7" style="padding-left:0; float:left; width:70% ; flex: auto;">
+                  <h3 class="mt8" style="font-family:'Montserrat'; font-weight:500; font-size:22px"><strong>Get in touch with our Expert:</strong> </h3>
+            
+                  <span onclick="window.location.href='https://techspawn.com/connect-with-techspawn'" style="color: #48c6be; cursor: pointer; display: flex;">
+                    https://techspawn.com/connect-with-techspawn</span>
+                
+                  <p class=" mt8" style="font-family:Montserrat ; display: inline;"> Any technical queries, want extra features, or anything else, our team is ready to answer all your questions just raise a support ticket</p>
+                </div>
+                <div class="col-md-3"  >
+                </div>
+              </div>
+          </div>
+        </div>
+      </p>
+    </div>
+
+    <div id="FAQs" class="tabcontent">
+      <div class="container">
+            <div class="row" style="font-family:'Poppins', sans-serif;">
+                <div class="col-md-6">
+                    <p><strong>Can the app sync data both ways? </strong></p>
+                    <p class="px-3">Ans - Yes, you can sync data both ways between QuickBooks Online and Odoo.</p>
+                </div> 
+                <div class="col-md-6">
+                    <p><strong>Can we make changes to the module?</strong></p>
+                    <p class="px-3">Ans - Yes, we can customize the module to fit your needs. If you need any changes, please contact us at support@techspawn.com. Our team is ready to help.</p>
+                </div>
+            </div>
+            <div class="row" style="font-family:'Poppins', sans-serif;">
+                <div class="col-md-6">
+                    <p><strong> How can we set up this module in Odoo?</strong></p>
+                    <p class="px-3">Ans - We include detailed documentation to help you set up the QuickBooks Odoo Connector. For any issues, contact us at support@techspawn.com.</p>
+                </div> 
+                <div class="col-md-6">
+                    <p><strong>Does your module work with both Odoo Community and Enterprise editions?</strong></p>
+                    <p class="px-3">Ans - Our module works with both Odoo Community and Enterprise editions, and configuration is the same for both.</p>
+                </div>
+            </div>
+            <div class="row" style="font-family:'Poppins', sans-serif;">
+                <div class="col-md-6">
+                    <p><strong>Will we get help with installing the app when we buy it?</strong></p>
+                    <p class="px-3">Ans - Yes, we offer full help with installing the app and any issues after it's installed.
+                    </p>
+                </div> 
+                <div class="col-md-6">
+                    <p><strong>Will I get updates if I buy the app?</strong></p>
+                    <p class="px-3">Ans - Yes, you get the latest version of the app you bought.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Does this module work with Odoo.sh.?</strong></p>
+                    <p class="px-3">Ans - Yes, our module works with odoo.sh.</p>
+                </div> 
+            </div>
+      </div>
+    </div>
+  </div>
+  
+</section> -->
+
+
+
+<div class="carsection">
+  <!-- <h2 class="cust_head shadow-lg mb-3" style="background-color: #f0f4f7; padding: 1%; border-radius: 15px; color: #091E42; font-family: Montserrat;
+  text-align: center; margin: 40px 32px; text-transform: uppercase;">RELATED PRODUCTS
+  </h2> -->
+  
+  <h2 style="font-family:'Poppins', sans-serif;text-align: center;font-weight: 500;">
+    RELATED PRODUCTS
+  </h2>
+</div>
+  
+<section class=" our_service_section">
+  <div class="container ">
+      <div class="mySlides">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center justify-content-end">
+            <a href="https://apps.odoo.com/apps/modules/17.0/odoo_shopify_connector/"><img src="ODOO-Shopify_v17.gif" style=" width: 320px; border-radius: 10px;"></a>
+            <a href="https://apps.odoo.com/apps/modules/17.0/odoo_shopify_connector/"><h2 style="font-size: 18px;padding-top: 10px;">Odoo Shopify Connector</h2></a>
+          </div>
+          <div class="col-md-4 text-center justify-content-center">
+            <a href="https://apps.odoo.com/apps/modules/17.0/odoo_woo_connect/"><img src="ODOO-WooCommerce_Version-17.gif" style="width: 320px; border-radius: 10px;"></a>
+            <a href="https://apps.odoo.com/apps/modules/17.0/odoo_woo_connect/"><h2 style="font-size: 18px;padding-top: 10px;">Odoo Woocommerce Connect</h2></a>
+          </div>
+          <div class="col-md-4 text-center justify-content-center">
+            <a href="https://apps.odoo.com/apps/modules/17.0/warehouse_stock_restrictions/"><img src="Warehouse-Restrictionsv17.gif" style="width: 320px; border-radius: 10px;"></a>
+            <a href="https://apps.odoo.com/apps/modules/17.0/warehouse_stock_restrictions/"><h2 style="font-size: 18px;padding-top: 10px;">Odoo Warehouse Restrictions</h2></a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+
+<script src="/description/assets/src/js/index_file.js"></script>
+
+</html>
+  
+  
